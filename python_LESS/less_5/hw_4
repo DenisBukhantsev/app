@@ -1,0 +1,8 @@
+print("sdfsf")
+sp1 = ['python', 'c#']
+sp2 = [1,2]
+def list_tuple_creator(args1, args2):
+    list_tuple = [(x,y) for x,y in zip(args2,args1)]
+    return list_tuple
+#print(list_tuple_creator(sp1, sp2))
+
