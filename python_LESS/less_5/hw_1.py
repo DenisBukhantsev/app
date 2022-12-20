@@ -6,5 +6,5 @@ def words_terminated(args):
     args = args.split(" ")
     new_args = [args.remove(i) for i in args if i in term]
     new_args = " ".join(map(str, args))
-    return new_args
-print(words_terminated("Конкретная функция, которую 5 вы хотите выполнить"))
+    return print(new_args)
+words_terminated("пугать ты галок пугай")
