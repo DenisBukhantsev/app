@@ -7,7 +7,7 @@ def field_show():
     print("------------------")
 
 def player1game():
-    wnin = "игрок 1 победил !"
+    wniner = "игрок 1 победил !"
     global field_list
     global choise
     x = False
@@ -21,23 +21,20 @@ def player1game():
             
         else:
             print(f"Это поле занято. попробуйте снова")
-    if field_list[0] == "X" and field_list[3] == "X" and field_list[6] == "X":
-        print(wnin)
-    elif field_list[1] == "X" and field_list[4] == "X" and field_list[7] == "X":
-        print(wnin)
-    elif field_list[2] == "X" and field_list[5] == "X" and field_list[8] == "X":
-        print(wnin)
-    elif field_list[0] == "X" and field_list[4] == "X" and field_list[8] == "X":
-        print(wnin)
-    elif field_list[2] == "X" and field_list[4] == "X" and field_list[6] == "X":
-        print(wnin)
-    else:
+    win_combo = ((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
+    win_chek = False
+    for i in win_combo:
+        if field_list[i[0]] == field_list[i[1]] == field_list[i[2]]:
+            print(wniner)
+            win_chek = True
+    if win_chek == False:
         player2game()
+
     field_show
 def player2game():
     global field_list
     global choise
-    wnin = "игрок 2 победил !"
+    wniner = "игрок 2 победил !"
     y = False
     while y != True:
         choise = int(input("Игрок 2 вы ходите O , ваш ход, выберите поле "))
@@ -47,18 +44,13 @@ def player2game():
             y = True
         else:
             print("Это поле занято. попробуйте снова " )
-    if field_list[0] == "O" and field_list[3] == "O" and field_list[6] == "O":
-        print(wnin)
-    elif field_list[1] == "O" and field_list[4] == "O" and field_list[7] == "O":
-        print(wnin)
-    elif field_list[2] == "O" and field_list[5] == "O" and field_list[8] == "O":
-        print(wnin)
-    elif field_list[0] == "0" and field_list[4] == "O" and field_list[8] == "O":
-        print(wnin)
-    elif field_list[2] == "O" and field_list[4] == "O" and field_list[6] == "O":
-        print(wnin)
-        
-    else:
+    win_combo = ((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
+    win_chek = False
+    for i in win_combo:
+        if field_list[i[0]] == field_list[i[1]] == field_list[i[2]]:
+            print(wniner)
+            win_chek = True
+    if win_chek == False:
         player1game()
     field_show
 print(player1game())
