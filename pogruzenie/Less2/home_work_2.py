@@ -6,7 +6,7 @@ a = int(input("a "))
 b = int(input("b "))
 c = int(input("c ")) 
 d = int(input("d "))
-action = input("действие ")
+action = input("действие + или *")
 if action == "+":
     if b == d:
         print(f"{a + c}/{d}")
