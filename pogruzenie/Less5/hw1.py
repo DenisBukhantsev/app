@@ -1,4 +1,6 @@
-#Задача 1
+#Задача 1 Напишите функцию, которая принимает на вход строку —
+#абсолютный путь до файла. Функция возвращает кортеж из трёх
+#элементов: путь, имя файла, расширение файла.
 
 a = "https://gbcdn.mrgcdn.ru/uploads/asset/4920276/attachment/7e1accab32ccfc3a8095d79a4597cb86.pdf"
 b = "https://github.com/DenisBukhantsev/app/blob/main/pogruzenie/less4/hw_1.py"
