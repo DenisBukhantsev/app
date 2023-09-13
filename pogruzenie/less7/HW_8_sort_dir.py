@@ -7,13 +7,13 @@ import os
 import csv
 import pickle
 import json
-our_path = Path.cwd()
+our_path = Path.cwd() #удобно
 def sort_dir(arg):
   result = []
-  for paths, dir, files in os.walk(arg):
+  for paths, dir, files in os.walk(arg):   #не нашел аналог этой функции в pathlib, подскажите может есть такое ? 
     
     for name in files:
-      res_path = arg /paths / name
+      res_path = arg /paths / name   # вот тут очень удобно мне показалось из прошлой домашки  функция path работает подтянул ее сюда
       size = res_path.stat().st_size
       result.append({"directory": paths, "Type": "file", 
                      "Name": name, "size" : f"{size} bytes"})
@@ -27,7 +27,7 @@ def sort_dir(arg):
   with open("mypicklefile.pickle", "wb") as picklefile:
     pickle.dump(result, picklefile)
     
-  with open("mycsv.csv", "w") as csvfile:
+  with open("mycsv.csv", "w") as csvfile: # вот тут я я чего то голову сломал с этим файлом , да и вообще тема новая 
         writer = csv.DictWriter(csvfile, fieldnames=result[0].keys())
         writer.writeheader()
         writer.writerows(result)
