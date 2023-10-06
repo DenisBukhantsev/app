@@ -1,4 +1,4 @@
-from name_discript import NameDescriptor
+from name_discript import DiscriptName
 import csv
 
 # Основной класс
