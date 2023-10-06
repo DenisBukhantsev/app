@@ -3,9 +3,9 @@ import csv
 
 # Основной класс
 class Student:
-    first_name = NameDescriptor()
-    middle_name = NameDescriptor()
-    last_name = NameDescriptor()
+    first_name = DiscriptName()
+    middle_name = DiscriptName()
+    last_name = DiscriptName()
 
     def __init__(self, first_name, middle_name, last_name, csv_path):
         self.first_name = first_name
