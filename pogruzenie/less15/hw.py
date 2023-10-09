@@ -9,7 +9,7 @@ import pickle
 import json
 import logging
 
-logging.basicConfig(filename="py_log.log", level=logging.DEBUG, filemode="w", encoding="utf-8",
+logging.basicConfig(filename="py_log.log", level=logging.INFO, filemode="w", encoding="utf-8",
                     format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
